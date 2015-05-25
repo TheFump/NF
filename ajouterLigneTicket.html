@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <meta charset="utf-8" />
+  <title>Achat</title>
+</head>
+<body> 
+  <h1>Ajout d'une ligne pour la facture</h1>
+ <hr/>
+	<p> Remplissez les informations pour ajouter unenregistrement d’une ligne </p>
+	<p> Vente numero <?php echo $_GET['vente']; ?>
+   		<form method="POST" action="ajouterLigneTicket.php">
+    		<p>Code de l'Article (5 chiffres): <input type="text" name="Code"/></p>
+    		<p>Quantité : <input type="text" name="Qte"/></p>
+    		<p>
+    		 	<input type="radio" name="Paiment" value="Carte"> Carte
+
+				<input type="radio" name="Paiment" value="CHK"> Chèque
+
+				<input type="radio" name="Paiment" value="esp"> Espèces 
+			</p>
+			<input type="hidden" name="vente" value = <?php $_GET['vente']; ?>>
+    		<input type="submit"/>
+ 		 </form>  
+ 		 
+  <a href="ajouterLigneTicket.html">Recommmencer</a>
+  <a href="Achat.html">Ajouter Ligne Suivante</a>
+  <a href="Acceuil.html">Finir</a>
+ 
+</body> 
+</html>
